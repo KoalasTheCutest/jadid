@@ -126,9 +126,6 @@
         footer.appendChild(paragraphElement);
         document.body.appendChild(footer);
     }
-    document.addEventListener('DOMContentLoaded', function () {
-        generateFooter();
-    });
     function createFooterLink(text, link) {
         const navItem = document.createElement('li');
         navItem.classList.add('nav-item');
@@ -663,6 +660,7 @@
         updateNavigation();
         LoadHeaderone();
         LoadLink("home");
+        generateFooter();
         ActiveLinkCallback();
     }
     window.addEventListener("load", Start);

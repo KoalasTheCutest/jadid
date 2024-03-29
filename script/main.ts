@@ -137,18 +137,7 @@
         }
     }
 
-    // function CheckLogin(){
-    //     if(sessionStorage.getItem("user")){
-    //         $("#login").html(`<a id="logout" class="nav-link" href="#"><i class="fas fa-undo"></i> Logout</a>`)
-    //     }
-    //
-    //     $("#logout").on("click",function(){
-    //
-    //         sessionStorage.clear();
-    //         $("#login").html(`<a class="nav-link" data="login"><i class="fas fa-sign-in-alt"></i> Login</a>`)
-    //         LoadLink("home");
-    //     });
-    // }
+
 
     /**
      *
@@ -189,34 +178,6 @@
 
 
 
-//
-//
-// // Project details array
-// const projectDetails = [
-//     {
-//         title: "Community Learning Platform",
-//         description: "Developed an online learning platform for the community hub, offering a variety of classes, workshops, and educational resources for people of all ages and backgrounds.",
-//         technologies: "React, Node.js, MongoDB, WebRTC",
-//         role: "Full Stack Developer",
-//         image: './file/img_1.png'
-//     },
-//     {
-//         title: "Volunteer Management System",
-//         description: "Created a volunteer management system to streamline the process of organizing and coordinating community events, projects, and activities with the help of dedicated volunteers.",
-//         technologies: "Django, PostgreSQL, Bootstrap, AWS",
-//         role: "Backend Developer",
-//         image: './file/img_4.png'
-//     },
-//     {
-//         title: "Community Social Network",
-//         description: "Designed and implemented a social networking platform for the community hub, fostering communication, collaboration, and the sharing of ideas among community members.",
-//         technologies: "Vue.js, Firebase, Real-time Database, Authentication",
-//         role: "Frontend Developer",
-//         image: './file/img_3.png'
-//     },
-//
-// ];
-
 // Dynamically create and append the video element
     document.addEventListener('DOMContentLoaded', function () {
         // This assumes that the URL is correct and the image file is in the specified location
@@ -239,83 +200,7 @@
         image: string;
     }
 
-    // Function to generate a project card
-    // function createProjectCard(project: Project) {
-    //     const card = document.createElement('div');
-    //     card.classList.add('project-card');
-    //
-    //     const titleElement = document.createElement('h2');
-    //     titleElement.textContent = project.title;
-    //
-    //     const descriptionElement = document.createElement('p');
-    //     descriptionElement.textContent = `Project Description: ${project.description}`;
-    //
-    //     const technologiesElement = document.createElement('p');
-    //     technologiesElement.textContent = `Key Technologies Used: ${project.technologies}`;
-    //
-    //     const roleElement = document.createElement('p');
-    //     roleElement.textContent = `Role: ${project.role}`;
-    //
-    //     const imageElement = document.createElement('img');
-    //     imageElement.src = project.image;
-    //     imageElement.alt = project.title;
-    //
-    //     // Make only the first image smaller
-    //     if (project.image === projectDetails[0].image) {
-    //         imageElement.style.maxWidth = '50%';
-    //         imageElement.style.height = 'auto';
-    //     }
-    //
-    //     card.appendChild(titleElement);
-    //     card.appendChild(descriptionElement);
-    //     card.appendChild(technologiesElement);
-    //     card.appendChild(roleElement);
-    //     card.appendChild(imageElement);
-    //
-    //     return card;
-    // }
 
-//
-//
-// // Define variables
-// let projectsPerLoad = 1;
-// let currentProjects = projectDetails.slice(0, projectsPerLoad);
-//
-// const loadMoreBtn = document.getElementById('load-more-btn');
-//
-// // Display projects function
-// // Make sure this variable is initialized correctly, pointing to the container in your HTML
-//     const projectContainer: HTMLElement = document.getElementById('projectContainer') as HTMLElement;
-//
-//     function displayProjects(projects: Project[]) {
-//         // Clear the container
-//         projectContainer.innerHTML = '';
-//
-//         // Iterate through the projects and display them
-//         projects.forEach((project) => {
-//             const card = createProjectCard(project);
-//             projectContainer.appendChild(card);
-//         });
-//     }
-//
-//
-// // Load more projects function
-//
-//
-//     function loadMoreProjects() {
-//         if (!loadMoreBtn) return; // Check if loadMoreBtn exists
-//
-//         projectsPerLoad += 1;
-//         const currentProjects = projectDetails.slice(0, projectsPerLoad);
-//         displayProjects(currentProjects);
-//
-//         // Hide 'Load More' button if all projects are displayed
-//         if (projectsPerLoad >= projectDetails.length) {
-//             if (loadMoreBtn) {
-//                 loadMoreBtn.style.display = 'none';
-//             }
-//         }
-//     }
     function generateFooter() {
         // Create footer element
         const footer = document.createElement('div');
@@ -360,9 +245,7 @@
         document.body.appendChild(footer);
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        generateFooter();
-    });
+
 
 
 // Function to create individual footer links
@@ -381,79 +264,6 @@
         return navItem;
     }
 
-
-//     let paragraphElement = document.createElement('p');
-//     paragraphElement.style.color = 'white'; // Set text color to white
-//
-// // Create copyright text
-//     let copyrightText = document.createTextNode('\u00A9 2024 Harmony Hub. All rights reserved. | ');
-//
-// // Append copyright text to paragraph element
-//     paragraphElement.appendChild(copyrightText);
-//
-// // Append paragraph element to footer
-//     footerElement.appendChild(paragraphElement);
-//
-//
-//     // Create Privacy Policy link
-//     // Create Privacy Policy link
-//     let privacyLink = document.createElement('a');
-//     privacyLink.href = 'privacy.html';
-//     privacyLink.textContent = 'Privacy Policy';
-//     privacyLink.style.color = 'white'; // Set color to white
-//
-// // Create Terms of Service link
-//     let termsLink = document.createElement('a');
-//     termsLink.href = 'terms.html';
-//     termsLink.textContent = 'Terms of Service';
-//     termsLink.style.color = 'white'; // Set color to white
-//
-// // Create Contact page link
-//     let contactLink = document.createElement('a');
-//     contactLink.href = 'contact.html';
-//     contactLink.textContent = 'Contact';
-//     contactLink.style.color = 'white'; // Set color to white
-//
-//
-//     // Append elements
-//     paragraphElement.appendChild(copyrightText);
-//     paragraphElement.appendChild(privacyLink);
-//     paragraphElement.appendChild(document.createTextNode(' | ')); // Pipe separator
-//     paragraphElement.appendChild(termsLink);
-//     paragraphElement.appendChild(document.createTextNode(' | ')); // Pipe separator
-//     paragraphElement.appendChild(contactLink);
-//
-//     footerElement.appendChild(paragraphElement);
-//
-//     // Append footer to the body
-//     document.body.appendChild(footerElement);
-// });
-
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     // Create a new list item element
-    //     const listItem = document.createElement('li');
-    //     listItem.classList.add('nav-item');
-    //
-    //     // Create a new anchor element
-    //     const anchor = document.createElement('a');
-    //     anchor.classList.add('nav-link');
-    //     anchor.href = "career.html"; // Set the href attribute to the desired URL
-    //     anchor.textContent = "Careers"; // Set the text content of the link
-    //
-    //     // Append the anchor element to the list item
-    //     listItem.appendChild(anchor);
-    //
-    //     // Get the navbar list and append the new list item to it
-    //     const navbarList = document.querySelector('.navbar-nav') as HTMLUListElement; // Cast it to the specific element type you expect
-    //
-    //     // Ensure that navbarList is not null before trying to append to it
-    //     if (navbarList) {
-    //         navbarList.appendChild(listItem);
-    //     } else {
-    //         console.error('The navbar list was not found in the document.');
-    //     }
-    // });
 
     function loadBlogPosts() {
         $.ajax({
@@ -765,27 +575,9 @@ function LoadHeader() {
     $.get("header.html", function (html_data) {
         $("header").html(html_data); // Replace header content with loaded HTML
 
-        // Check if user is logged in
-        // if (sessionStorage.getItem("user")) {
-        //     // If logged in, update navbar link to "Logout"
-        //     $("#loginLink").text("Logout");
-        //     $("#loginLink").attr("href", "login.html"); // Set logout page link
-        //
-        //     // Add click event handler for logout
-        //     $("#loginLink").on("click", function () {
-        //         sessionStorage.clear(); // Clear user session
-        //         location.href = "index.html"; // Redirect to index page after logout
-        //     });
-        // } else {
-        //     // If not logged in, update navbar link to "Login"
-        //     $("#loginLink").text("Login");
-        //     $("#loginLink").attr("href", "login.html"); // Set login page link
-        // }
     });
 }
-//
-//
-//
+
     document.addEventListener("DOMContentLoaded", () => {
         LoadHeader();
     });
@@ -1246,6 +1038,7 @@ function DisplayAboutPage() {
         updateNavigation();
         LoadHeaderone();
         LoadLink("home");
+        generateFooter();
 
         ActiveLinkCallback();
 
